@@ -293,12 +293,12 @@ footer .copy{font-size:.72rem;color:rgba(255,255,255,.4);margin-top:10px}
 <meta property="og:title" content="Prestige Golfshire — Nandi Hills, Devanahalli | Perfect Neighbourhood" />
 <meta property="og:description" content="Prestige Golfshire by Prestige Group, Nandi Hills, Devanahalli. ₹9 – 20+ Cr, 5,000 – 10,000+ sq ft. 15 min to Kempegowda Int'l Airport. Enquire for a private viewing." />
 <meta property="og:url" content="https://perfectneighbourhood.netlify.app/prestige-golfshire" />
-<meta property="og:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80" />
+<meta property="og:image" content="https://perfectneighbourhood.netlify.app/images/prestige-golfshire/0.webp" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Prestige Golfshire — Nandi Hills, Devanahalli | Perfect Neighbourhood" />
 <meta name="twitter:description" content="Prestige Golfshire by Prestige Group, Nandi Hills, Devanahalli. ₹9 – 20+ Cr, 5,000 – 10,000+ sq ft. 15 min to Kempegowda Int'l Airport. Enquire for a private viewing." />
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Residence","name":"Prestige Golfshire","description":"Prestige Golfshire is an ultra-luxury villa estate sprawled across roughly 275 acres at the verdant base of Nandi Hills in Devanahalli. Conceived around an 18-hole signature championship golf course, the gated enclave houses just over 200 bespoke villas, each commanding sweeping views of fairways, water bodies and the surrounding hills. Residences range from expansive 3 BHK homes to palatial 5 BHK mansions exceeding 10,000 sq ft, finished to exacting standards. Anchoring community life is The Falcon Greens clubhouse, complemented by a luxury resort, fine-dining, spa, pool and racquet courts. Minutes from Kempegowda International Airport via NH-44, Golfshire blends serene countryside living with effortless connectivity to the airport and the Aerospace SEZ.","url":"https://perfectneighbourhood.netlify.app/prestige-golfshire","image":"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80","address":{"@type":"PostalAddress","addressLocality":"Nandi Hills, Devanahalli","addressRegion":"Karnataka","addressCountry":"IN","streetAddress":"Foothills of Nandi Hills, off Nandi Hills Road, Devanahalli, North Bangalore"},"geo":{"@type":"GeoCoordinates","latitude":13.37,"longitude":77.683},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"18-hole championship golf course"},{"@type":"LocationFeatureSpecification","name":"The Falcon Greens clubhouse"},{"@type":"LocationFeatureSpecification","name":"Luxury resort & fine-dining"},{"@type":"LocationFeatureSpecification","name":"Spa and wellness centre"},{"@type":"LocationFeatureSpecification","name":"Swimming pools"},{"@type":"LocationFeatureSpecification","name":"Squash and tennis courts"},{"@type":"LocationFeatureSpecification","name":"Golf academy & pro shop"},{"@type":"LocationFeatureSpecification","name":"Landscaped gardens & water features"},{"@type":"LocationFeatureSpecification","name":"24/7 gated security"}],"numberOfRooms":"3"}</script>
+<meta name="twitter:image" content="https://perfectneighbourhood.netlify.app/images/prestige-golfshire/0.webp" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Residence","name":"Prestige Golfshire","description":"Prestige Golfshire is an ultra-luxury villa estate sprawled across roughly 275 acres at the verdant base of Nandi Hills in Devanahalli. Conceived around an 18-hole signature championship golf course, the gated enclave houses just over 200 bespoke villas, each commanding sweeping views of fairways, water bodies and the surrounding hills. Residences range from expansive 3 BHK homes to palatial 5 BHK mansions exceeding 10,000 sq ft, finished to exacting standards. Anchoring community life is The Falcon Greens clubhouse, complemented by a luxury resort, fine-dining, spa, pool and racquet courts. Minutes from Kempegowda International Airport via NH-44, Golfshire blends serene countryside living with effortless connectivity to the airport and the Aerospace SEZ.","url":"https://perfectneighbourhood.netlify.app/prestige-golfshire","image":"https://perfectneighbourhood.netlify.app/images/prestige-golfshire/0.webp","address":{"@type":"PostalAddress","addressLocality":"Nandi Hills, Devanahalli","addressRegion":"Karnataka","addressCountry":"IN","streetAddress":"Foothills of Nandi Hills, off Nandi Hills Road, Devanahalli, North Bangalore"},"geo":{"@type":"GeoCoordinates","latitude":13.37,"longitude":77.683},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"18-hole championship golf course"},{"@type":"LocationFeatureSpecification","name":"The Falcon Greens clubhouse"},{"@type":"LocationFeatureSpecification","name":"Luxury resort & fine-dining"},{"@type":"LocationFeatureSpecification","name":"Spa and wellness centre"},{"@type":"LocationFeatureSpecification","name":"Swimming pools"},{"@type":"LocationFeatureSpecification","name":"Squash and tennis courts"},{"@type":"LocationFeatureSpecification","name":"Golf academy & pro shop"},{"@type":"LocationFeatureSpecification","name":"Landscaped gardens & water features"},{"@type":"LocationFeatureSpecification","name":"24/7 gated security"}],"numberOfRooms":"3"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"The Collection","item":"https://perfectneighbourhood.netlify.app/#collection"},{"@type":"ListItem","position":2,"name":"Prestige Golfshire","item":"https://perfectneighbourhood.netlify.app/prestige-golfshire"}]}</script>
 </head>
 <body>
@@ -346,7 +346,9 @@ const id=window.__SLUG__||new URLSearchParams(location.search).get('id');
 const p=PROPS.find(x=>x.slug===id);
 const app=document.getElementById('app');
 const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
-const imgURL=(idv,w)=>`https://images.unsplash.com/photo-${idv}?auto=format&fit=crop&w=${w||900}&q=80`;
+const imgURL=(idv,w)=> !idv ? '' : /[\/.]/.test(idv) ? idv : `https://images.unsplash.com/photo-${idv}?auto=format&fit=crop&w=${w||900}&q=80`;
+const propImgs=x=>(window.PROP_IMAGES&&window.PROP_IMAGES[x.slug])||[];
+const propHero=x=>propImgs(x)[0]||x.img;
 const mono=n=>n.split('—')[0].trim().split(' ').slice(0,2).map(w=>w[0]).join('');
 const pinSvg='<svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>';
 const tick='<svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5-1.4 1.4L9 19 20 8l-1.4-1.4z"/></svg>';
@@ -360,7 +362,8 @@ if(!p){
 } else {
   document.title=`${p.full||p.name} — Perfect Neighbourhood`;
   const statusLabel={ready:"Ready to move",invite:"By Invitation",sold:"Sold Out"}[p.status]||"";
-  const heroMedia=p.img?`<img id="pheroImg" src="${imgURL(p.img,1920)}" alt="${p.name}" />`:`<div class="phero-mono">${mono(p.name)}</div>`;
+  const hero=propHero(p);
+  const heroMedia=hero?`<img id="pheroImg" src="${imgURL(hero,1920)}" alt="${p.name}" />`:`<div class="phero-mono">${mono(p.name)}</div>`;
   const shortPlace=s=>s.replace("Kempegowda International Airport","Int'l Airport").replace(/ \(.*\)/,'').replace(" / ORR","");
   const k0=(p.connectivity&&p.connectivity[0])?p.connectivity[0]:null;
   const facts=[
@@ -368,7 +371,8 @@ if(!p){
   ];
   if(k0) facts.push({v:k0.minutes,k:shortPlace(k0.place)});
   facts.push({v:cap(p.type),k:"Typology"});
-  const gallery=[...new Set([p.img,...POOL].filter(Boolean))].slice(0,5);
+  const realImgs=propImgs(p);
+  const gallery=realImgs.length?realImgs.slice(0,6):[...new Set([p.img,...POOL].filter(Boolean))].slice(0,5);
   const ovImg=gallery[1]||gallery[0]||POOL[0];
   const related=PROPS.filter(x=>x.slug!==p.slug).sort((a,b)=>(a.type===p.type?-1:0)-(b.type===p.type?-1:0)).slice(0,3);
 
@@ -409,7 +413,7 @@ if(!p){
     </div>
   </div></div></section>
 
-  <section class="bigtype"><div class="wrap"><h2 class="bigtype-h" style="background-image:url('${imgURL(p.img||ovImg,1600)}')">${p.name}</h2></div></section>
+  <section class="bigtype"><div class="wrap"><h2 class="bigtype-h" style="background-image:url('${imgURL(hero||ovImg,1600)}')">${p.name}</h2></div></section>
 
   <section class="sec sec-black"><div class="wrap">
     <div class="sec-label reveal">Key Facts</div>
@@ -509,7 +513,7 @@ if(!p){
     <h2 class="h2 reveal">More residences</h2>
     <div class="rel-grid">
       ${related.map(r=>`<a class="rel" href="${r.slug}.html" data-hover>
-        <div class="rel-media">${r.img?`<img src="${imgURL(r.img,700)}" alt="${r.name}" loading="lazy" />`:`<div class="rel-mono">${mono(r.name)}</div>`}</div>
+        <div class="rel-media">${propHero(r)?`<img src="${imgURL(propHero(r),700)}" alt="${r.name}" loading="lazy" />`:`<div class="rel-mono">${mono(r.name)}</div>`}</div>
         <div class="rel-body"><div class="rel-loc">${r.loc}</div><div class="rel-name">${r.name}</div><div class="rel-price">${r.range} · ${cap(r.type)}</div></div>
       </a>`).join('')}
     </div>

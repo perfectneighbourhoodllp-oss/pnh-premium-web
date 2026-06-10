@@ -293,12 +293,12 @@ footer .copy{font-size:.72rem;color:rgba(255,255,255,.4);margin-top:10px}
 <meta property="og:title" content="Bhartiya City — Leela Residences — Thanisandra, North Bangalore | Perfect Neighbourhood" />
 <meta property="og:description" content="Bhartiya City — Leela Residences by Bhartiya Urban, Thanisandra, North Bangalore. ₹1.5 – 5.26 Cr, 846 – 4,209 sq ft. 15 min to Manyata Tech Park. Enquire for a private viewing." />
 <meta property="og:url" content="https://perfectneighbourhood.netlify.app/bhartiya-city-leela" />
-<meta property="og:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80" />
+<meta property="og:image" content="https://perfectneighbourhood.netlify.app/images/bhartiya-city-leela/0.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Bhartiya City — Leela Residences — Thanisandra, North Bangalore | Perfect Neighbourhood" />
 <meta name="twitter:description" content="Bhartiya City — Leela Residences by Bhartiya Urban, Thanisandra, North Bangalore. ₹1.5 – 5.26 Cr, 846 – 4,209 sq ft. 15 min to Manyata Tech Park. Enquire for a private viewing." />
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Residence","name":"Bhartiya City — Leela Residences","description":"Leela Residences at Bhartiya City is among India's first hotel-branded residences, blending the legendary hospitality of The Leela with refined urban living on Thanisandra Main Road in North Bengaluru. Set within the landmark Bhartiya City township, these 176 homes rise across elegant towers and span studios to expansive 4 BHK layouts of 846 to 4,209 sq ft, each backed by Leela-style concierge and signature spa services. Residents enjoy resort-grade amenities, an adjoining five-star Leela hotel, lush landscaped greens, fine dining and a self-contained ecosystem that includes a 3.7-million-sq-ft SEZ office hub, retail boulevard and school. Strategically placed near Manyata Tech Park, Hebbal and the Outer Ring Road, it offers seamless live-work-play convenience.","url":"https://perfectneighbourhood.netlify.app/bhartiya-city-leela","image":"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80","address":{"@type":"PostalAddress","addressLocality":"Thanisandra, North Bangalore","addressRegion":"Karnataka","addressCountry":"IN","streetAddress":"Thanisandra Main Road, within Bhartiya City township, near Hebbal & Manyata"},"geo":{"@type":"GeoCoordinates","latitude":13.063,"longitude":77.625},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Leela Spa & sauna"},{"@type":"LocationFeatureSpecification","name":"Swimming pool"},{"@type":"LocationFeatureSpecification","name":"Gymnasium"},{"@type":"LocationFeatureSpecification","name":"Clubhouse with lounge & bar"},{"@type":"LocationFeatureSpecification","name":"Mini theatre"},{"@type":"LocationFeatureSpecification","name":"Jogging track"},{"@type":"LocationFeatureSpecification","name":"Landscaped gardens"},{"@type":"LocationFeatureSpecification","name":"Retail & fine dining on-site"},{"@type":"LocationFeatureSpecification","name":"Adjoining five-star Leela hotel"}]}</script>
+<meta name="twitter:image" content="https://perfectneighbourhood.netlify.app/images/bhartiya-city-leela/0.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Residence","name":"Bhartiya City — Leela Residences","description":"Leela Residences at Bhartiya City is among India's first hotel-branded residences, blending the legendary hospitality of The Leela with refined urban living on Thanisandra Main Road in North Bengaluru. Set within the landmark Bhartiya City township, these 176 homes rise across elegant towers and span studios to expansive 4 BHK layouts of 846 to 4,209 sq ft, each backed by Leela-style concierge and signature spa services. Residents enjoy resort-grade amenities, an adjoining five-star Leela hotel, lush landscaped greens, fine dining and a self-contained ecosystem that includes a 3.7-million-sq-ft SEZ office hub, retail boulevard and school. Strategically placed near Manyata Tech Park, Hebbal and the Outer Ring Road, it offers seamless live-work-play convenience.","url":"https://perfectneighbourhood.netlify.app/bhartiya-city-leela","image":"https://perfectneighbourhood.netlify.app/images/bhartiya-city-leela/0.png","address":{"@type":"PostalAddress","addressLocality":"Thanisandra, North Bangalore","addressRegion":"Karnataka","addressCountry":"IN","streetAddress":"Thanisandra Main Road, within Bhartiya City township, near Hebbal & Manyata"},"geo":{"@type":"GeoCoordinates","latitude":13.063,"longitude":77.625},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Leela Spa & sauna"},{"@type":"LocationFeatureSpecification","name":"Swimming pool"},{"@type":"LocationFeatureSpecification","name":"Gymnasium"},{"@type":"LocationFeatureSpecification","name":"Clubhouse with lounge & bar"},{"@type":"LocationFeatureSpecification","name":"Mini theatre"},{"@type":"LocationFeatureSpecification","name":"Jogging track"},{"@type":"LocationFeatureSpecification","name":"Landscaped gardens"},{"@type":"LocationFeatureSpecification","name":"Retail & fine dining on-site"},{"@type":"LocationFeatureSpecification","name":"Adjoining five-star Leela hotel"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"The Collection","item":"https://perfectneighbourhood.netlify.app/#collection"},{"@type":"ListItem","position":2,"name":"Bhartiya City — Leela Residences","item":"https://perfectneighbourhood.netlify.app/bhartiya-city-leela"}]}</script>
 </head>
 <body>
@@ -346,7 +346,9 @@ const id=window.__SLUG__||new URLSearchParams(location.search).get('id');
 const p=PROPS.find(x=>x.slug===id);
 const app=document.getElementById('app');
 const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
-const imgURL=(idv,w)=>`https://images.unsplash.com/photo-${idv}?auto=format&fit=crop&w=${w||900}&q=80`;
+const imgURL=(idv,w)=> !idv ? '' : /[\/.]/.test(idv) ? idv : `https://images.unsplash.com/photo-${idv}?auto=format&fit=crop&w=${w||900}&q=80`;
+const propImgs=x=>(window.PROP_IMAGES&&window.PROP_IMAGES[x.slug])||[];
+const propHero=x=>propImgs(x)[0]||x.img;
 const mono=n=>n.split('—')[0].trim().split(' ').slice(0,2).map(w=>w[0]).join('');
 const pinSvg='<svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>';
 const tick='<svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5-1.4 1.4L9 19 20 8l-1.4-1.4z"/></svg>';
@@ -360,7 +362,8 @@ if(!p){
 } else {
   document.title=`${p.full||p.name} — Perfect Neighbourhood`;
   const statusLabel={ready:"Ready to move",invite:"By Invitation",sold:"Sold Out"}[p.status]||"";
-  const heroMedia=p.img?`<img id="pheroImg" src="${imgURL(p.img,1920)}" alt="${p.name}" />`:`<div class="phero-mono">${mono(p.name)}</div>`;
+  const hero=propHero(p);
+  const heroMedia=hero?`<img id="pheroImg" src="${imgURL(hero,1920)}" alt="${p.name}" />`:`<div class="phero-mono">${mono(p.name)}</div>`;
   const shortPlace=s=>s.replace("Kempegowda International Airport","Int'l Airport").replace(/ \(.*\)/,'').replace(" / ORR","");
   const k0=(p.connectivity&&p.connectivity[0])?p.connectivity[0]:null;
   const facts=[
@@ -368,7 +371,8 @@ if(!p){
   ];
   if(k0) facts.push({v:k0.minutes,k:shortPlace(k0.place)});
   facts.push({v:cap(p.type),k:"Typology"});
-  const gallery=[...new Set([p.img,...POOL].filter(Boolean))].slice(0,5);
+  const realImgs=propImgs(p);
+  const gallery=realImgs.length?realImgs.slice(0,6):[...new Set([p.img,...POOL].filter(Boolean))].slice(0,5);
   const ovImg=gallery[1]||gallery[0]||POOL[0];
   const related=PROPS.filter(x=>x.slug!==p.slug).sort((a,b)=>(a.type===p.type?-1:0)-(b.type===p.type?-1:0)).slice(0,3);
 
@@ -409,7 +413,7 @@ if(!p){
     </div>
   </div></div></section>
 
-  <section class="bigtype"><div class="wrap"><h2 class="bigtype-h" style="background-image:url('${imgURL(p.img||ovImg,1600)}')">${p.name}</h2></div></section>
+  <section class="bigtype"><div class="wrap"><h2 class="bigtype-h" style="background-image:url('${imgURL(hero||ovImg,1600)}')">${p.name}</h2></div></section>
 
   <section class="sec sec-black"><div class="wrap">
     <div class="sec-label reveal">Key Facts</div>
@@ -509,7 +513,7 @@ if(!p){
     <h2 class="h2 reveal">More residences</h2>
     <div class="rel-grid">
       ${related.map(r=>`<a class="rel" href="${r.slug}.html" data-hover>
-        <div class="rel-media">${r.img?`<img src="${imgURL(r.img,700)}" alt="${r.name}" loading="lazy" />`:`<div class="rel-mono">${mono(r.name)}</div>`}</div>
+        <div class="rel-media">${propHero(r)?`<img src="${imgURL(propHero(r),700)}" alt="${r.name}" loading="lazy" />`:`<div class="rel-mono">${mono(r.name)}</div>`}</div>
         <div class="rel-body"><div class="rel-loc">${r.loc}</div><div class="rel-name">${r.name}</div><div class="rel-price">${r.range} · ${cap(r.type)}</div></div>
       </a>`).join('')}
     </div>

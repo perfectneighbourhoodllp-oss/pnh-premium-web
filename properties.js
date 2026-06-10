@@ -308,3 +308,31 @@ window.PROPERTIES = [
   sources:["https://www.luxuryresidences.in/four-seasons-private-residences-bellary-road-bangalore/"]
 }
 ];
+
+/* ============================================================
+   Real property photography (hero + gallery), keyed by slug.
+   index 0 = hero. Generated from supplied Exclusive Residences
+   Images. Falls back to Unsplash img field where absent.        
+   ============================================================ */
+window.PROP_IMAGES = {
+  "adarsh-palm-retreat": ["images/adarsh-palm-retreat/0.png"],
+  "bhartiya-city-leela": ["images/bhartiya-city-leela/0.png","images/bhartiya-city-leela/1.webp","images/bhartiya-city-leela/2.webp","images/bhartiya-city-leela/3.webp","images/bhartiya-city-leela/4.png"],
+  "brigade-orchards-signature": ["images/brigade-orchards-signature/0.png"],
+  "embassy-boulevard": ["images/embassy-boulevard/0.png"],
+  "embassy-grove": ["images/embassy-grove/0.png"],
+  "embassy-lake-terraces": ["images/embassy-lake-terraces/0.png"],
+  "embassy-one-four-seasons": ["images/embassy-one-four-seasons/0.png","images/embassy-one-four-seasons/1.png","images/embassy-one-four-seasons/2.png","images/embassy-one-four-seasons/3.png","images/embassy-one-four-seasons/4.png"],
+  "embassy-springs-the-grove": ["images/embassy-springs-the-grove/0.png"],
+  "godrej-reserve": ["images/godrej-reserve/0.png","images/godrej-reserve/1.webp","images/godrej-reserve/2.webp","images/godrej-reserve/3.webp","images/godrej-reserve/4.webp"],
+  "nambiar-bellesa": ["images/nambiar-bellesa/0.png","images/nambiar-bellesa/1.png","images/nambiar-bellesa/2.png","images/nambiar-bellesa/3.webp"],
+  "phoenix-kessaku": ["images/phoenix-kessaku/0.png"],
+  "phoenix-one-west": ["images/phoenix-one-west/0.png","images/phoenix-one-west/1.png","images/phoenix-one-west/2.png","images/phoenix-one-west/3.png","images/phoenix-one-west/4.png"],
+  "prestige-dew-drops": ["images/prestige-dew-drops/0.png","images/prestige-dew-drops/1.png","images/prestige-dew-drops/2.png","images/prestige-dew-drops/3.png"],
+  "prestige-golfshire": ["images/prestige-golfshire/0.webp","images/prestige-golfshire/1.webp","images/prestige-golfshire/2.webp","images/prestige-golfshire/3.webp"],
+  "prestige-kingfisher-towers": ["images/prestige-kingfisher-towers/0.png","images/prestige-kingfisher-towers/1.webp","images/prestige-kingfisher-towers/2.webp","images/prestige-kingfisher-towers/3.webp"],
+  "prestige-leela-residences": ["images/prestige-leela-residences/0.png","images/prestige-leela-residences/1.png","images/prestige-leela-residences/2.png","images/prestige-leela-residences/3.png","images/prestige-leela-residences/4.png"],
+  "prestige-white-meadows": ["images/prestige-white-meadows/0.png"],
+  "sobha-international-city": ["images/sobha-international-city/0.png","images/sobha-international-city/1.webp","images/sobha-international-city/2.webp","images/sobha-international-city/3.webp","images/sobha-international-city/4.webp","images/sobha-international-city/5.webp"],
+  "tata-promont": ["images/tata-promont/0.png","images/tata-promont/1.png","images/tata-promont/2.png","images/tata-promont/3.png","images/tata-promont/4.jpg"],
+  "total-environment-rhapsody": ["images/total-environment-rhapsody/0.png"],
+};

@@ -17,8 +17,14 @@ const template = fs.readFileSync('property.html', 'utf8');
 const cap = s => (s || '').charAt(0).toUpperCase() + (s || '').slice(1);
 const esc = s => String(s == null ? '' : s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const imgURL = (id, w) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w || 1200}&q=80`;
-const heroImg = p => p.img ? imgURL(p.img, 1600) : imgURL('1600596542815-ffad4c1539a9', 1600);
+const imgURL = (id, w) => /[\/.]/.test(id) ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w || 1200}&q=80`;
+const PROP_IMAGES = global.window.PROP_IMAGES || {};
+// Social/SEO hero — absolute URL. Prefer real local photo, else Unsplash fallback.
+const heroImg = p => {
+  const local = (PROP_IMAGES[p.slug] || [])[0];
+  if (local) return `${SITE_URL}/${local}`;
+  return p.img ? imgURL(p.img, 1600) : imgURL('1600596542815-ffad4c1539a9', 1600);
+};
 
 function meta(p){
   const title = `${p.full || p.name} — ${p.loc} | Perfect Neighbourhood`;

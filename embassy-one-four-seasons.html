@@ -293,12 +293,12 @@ footer .copy{font-size:.72rem;color:rgba(255,255,255,.4);margin-top:10px}
 <meta property="og:title" content="Embassy One — Four Seasons Private Residences — Bellary Road, North Bangalore | Perfect Neighbourhood" />
 <meta property="og:description" content="Embassy One — Four Seasons Private Residences by Embassy Group, Bellary Road, North Bangalore. ₹7.4 – 30 Cr, 1,992 – 5,870 sq ft. Bengaluru's first Four Seasons-serviced homes. Enquire for a private viewing." />
 <meta property="og:url" content="https://perfectneighbourhood.netlify.app/embassy-one-four-seasons" />
-<meta property="og:image" content="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1600&q=80" />
+<meta property="og:image" content="https://perfectneighbourhood.netlify.app/images/embassy-one-four-seasons/0.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Embassy One — Four Seasons Private Residences — Bellary Road, North Bangalore | Perfect Neighbourhood" />
 <meta name="twitter:description" content="Embassy One — Four Seasons Private Residences by Embassy Group, Bellary Road, North Bangalore. ₹7.4 – 30 Cr, 1,992 – 5,870 sq ft. Bengaluru's first Four Seasons-serviced homes. Enquire for a private viewing." />
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1600&q=80" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Residence","name":"Embassy One — Four Seasons Private Residences","description":"Embassy One — Four Seasons Private Residences is Bengaluru's premier branded-residence address — the city's first homes serviced by Four Seasons hospitality. Developed by the Embassy Group on a 6.5-acre integrated precinct on Bellary Road near Hebbal, it comprises two 28-storey towers of strictly limited residences alongside a Four Seasons Hotel. Homes span 1 to 5 BHK and penthouses, from roughly 1,992 to 5,870 sq ft, with 10-foot ceilings, central air-conditioning and interiors by world-renowned designers Yabu Pushelberg. Residents enjoy hotel-grade living: 24-hour concierge, a temperature-controlled pool, private spa room, yoga and pilates studio, fitness centre, media room, game room and a climate-controlled wine chamber. Positioned on the airport corridor, it sets the benchmark for turnkey, internationally serviced luxury.","url":"https://perfectneighbourhood.netlify.app/embassy-one-four-seasons","image":"https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1600&q=80","address":{"@type":"PostalAddress","addressLocality":"Bellary Road, North Bangalore","addressRegion":"Karnataka","addressCountry":"IN","streetAddress":"Ganganagar, Bellary Road (NH-44), near Hebbal"},"geo":{"@type":"GeoCoordinates","latitude":13.02,"longitude":77.591},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"24-hour Four Seasons concierge"},{"@type":"LocationFeatureSpecification","name":"Temperature-controlled pool"},{"@type":"LocationFeatureSpecification","name":"Private spa treatment room"},{"@type":"LocationFeatureSpecification","name":"Yoga & pilates studio"},{"@type":"LocationFeatureSpecification","name":"Fitness centre"},{"@type":"LocationFeatureSpecification","name":"Media room"},{"@type":"LocationFeatureSpecification","name":"Game room with bar"},{"@type":"LocationFeatureSpecification","name":"Climate-controlled wine chamber"},{"@type":"LocationFeatureSpecification","name":"Private lobby & driver's lounge"}],"numberOfRooms":"1"}</script>
+<meta name="twitter:image" content="https://perfectneighbourhood.netlify.app/images/embassy-one-four-seasons/0.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Residence","name":"Embassy One — Four Seasons Private Residences","description":"Embassy One — Four Seasons Private Residences is Bengaluru's premier branded-residence address — the city's first homes serviced by Four Seasons hospitality. Developed by the Embassy Group on a 6.5-acre integrated precinct on Bellary Road near Hebbal, it comprises two 28-storey towers of strictly limited residences alongside a Four Seasons Hotel. Homes span 1 to 5 BHK and penthouses, from roughly 1,992 to 5,870 sq ft, with 10-foot ceilings, central air-conditioning and interiors by world-renowned designers Yabu Pushelberg. Residents enjoy hotel-grade living: 24-hour concierge, a temperature-controlled pool, private spa room, yoga and pilates studio, fitness centre, media room, game room and a climate-controlled wine chamber. Positioned on the airport corridor, it sets the benchmark for turnkey, internationally serviced luxury.","url":"https://perfectneighbourhood.netlify.app/embassy-one-four-seasons","image":"https://perfectneighbourhood.netlify.app/images/embassy-one-four-seasons/0.png","address":{"@type":"PostalAddress","addressLocality":"Bellary Road, North Bangalore","addressRegion":"Karnataka","addressCountry":"IN","streetAddress":"Ganganagar, Bellary Road (NH-44), near Hebbal"},"geo":{"@type":"GeoCoordinates","latitude":13.02,"longitude":77.591},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"24-hour Four Seasons concierge"},{"@type":"LocationFeatureSpecification","name":"Temperature-controlled pool"},{"@type":"LocationFeatureSpecification","name":"Private spa treatment room"},{"@type":"LocationFeatureSpecification","name":"Yoga & pilates studio"},{"@type":"LocationFeatureSpecification","name":"Fitness centre"},{"@type":"LocationFeatureSpecification","name":"Media room"},{"@type":"LocationFeatureSpecification","name":"Game room with bar"},{"@type":"LocationFeatureSpecification","name":"Climate-controlled wine chamber"},{"@type":"LocationFeatureSpecification","name":"Private lobby & driver's lounge"}],"numberOfRooms":"1"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"The Collection","item":"https://perfectneighbourhood.netlify.app/#collection"},{"@type":"ListItem","position":2,"name":"Embassy One — Four Seasons Private Residences","item":"https://perfectneighbourhood.netlify.app/embassy-one-four-seasons"}]}</script>
 </head>
 <body>
@@ -346,7 +346,9 @@ const id=window.__SLUG__||new URLSearchParams(location.search).get('id');
 const p=PROPS.find(x=>x.slug===id);
 const app=document.getElementById('app');
 const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
-const imgURL=(idv,w)=>`https://images.unsplash.com/photo-${idv}?auto=format&fit=crop&w=${w||900}&q=80`;
+const imgURL=(idv,w)=> !idv ? '' : /[\/.]/.test(idv) ? idv : `https://images.unsplash.com/photo-${idv}?auto=format&fit=crop&w=${w||900}&q=80`;
+const propImgs=x=>(window.PROP_IMAGES&&window.PROP_IMAGES[x.slug])||[];
+const propHero=x=>propImgs(x)[0]||x.img;
 const mono=n=>n.split('—')[0].trim().split(' ').slice(0,2).map(w=>w[0]).join('');
 const pinSvg='<svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>';
 const tick='<svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5-1.4 1.4L9 19 20 8l-1.4-1.4z"/></svg>';
@@ -360,7 +362,8 @@ if(!p){
 } else {
   document.title=`${p.full||p.name} — Perfect Neighbourhood`;
   const statusLabel={ready:"Ready to move",invite:"By Invitation",sold:"Sold Out"}[p.status]||"";
-  const heroMedia=p.img?`<img id="pheroImg" src="${imgURL(p.img,1920)}" alt="${p.name}" />`:`<div class="phero-mono">${mono(p.name)}</div>`;
+  const hero=propHero(p);
+  const heroMedia=hero?`<img id="pheroImg" src="${imgURL(hero,1920)}" alt="${p.name}" />`:`<div class="phero-mono">${mono(p.name)}</div>`;
   const shortPlace=s=>s.replace("Kempegowda International Airport","Int'l Airport").replace(/ \(.*\)/,'').replace(" / ORR","");
   const k0=(p.connectivity&&p.connectivity[0])?p.connectivity[0]:null;
   const facts=[
@@ -368,7 +371,8 @@ if(!p){
   ];
   if(k0) facts.push({v:k0.minutes,k:shortPlace(k0.place)});
   facts.push({v:cap(p.type),k:"Typology"});
-  const gallery=[...new Set([p.img,...POOL].filter(Boolean))].slice(0,5);
+  const realImgs=propImgs(p);
+  const gallery=realImgs.length?realImgs.slice(0,6):[...new Set([p.img,...POOL].filter(Boolean))].slice(0,5);
   const ovImg=gallery[1]||gallery[0]||POOL[0];
   const related=PROPS.filter(x=>x.slug!==p.slug).sort((a,b)=>(a.type===p.type?-1:0)-(b.type===p.type?-1:0)).slice(0,3);
 
@@ -409,7 +413,7 @@ if(!p){
     </div>
   </div></div></section>
 
-  <section class="bigtype"><div class="wrap"><h2 class="bigtype-h" style="background-image:url('${imgURL(p.img||ovImg,1600)}')">${p.name}</h2></div></section>
+  <section class="bigtype"><div class="wrap"><h2 class="bigtype-h" style="background-image:url('${imgURL(hero||ovImg,1600)}')">${p.name}</h2></div></section>
 
   <section class="sec sec-black"><div class="wrap">
     <div class="sec-label reveal">Key Facts</div>
@@ -509,7 +513,7 @@ if(!p){
     <h2 class="h2 reveal">More residences</h2>
     <div class="rel-grid">
       ${related.map(r=>`<a class="rel" href="${r.slug}.html" data-hover>
-        <div class="rel-media">${r.img?`<img src="${imgURL(r.img,700)}" alt="${r.name}" loading="lazy" />`:`<div class="rel-mono">${mono(r.name)}</div>`}</div>
+        <div class="rel-media">${propHero(r)?`<img src="${imgURL(propHero(r),700)}" alt="${r.name}" loading="lazy" />`:`<div class="rel-mono">${mono(r.name)}</div>`}</div>
         <div class="rel-body"><div class="rel-loc">${r.loc}</div><div class="rel-name">${r.name}</div><div class="rel-price">${r.range} · ${cap(r.type)}</div></div>
       </a>`).join('')}
     </div>
