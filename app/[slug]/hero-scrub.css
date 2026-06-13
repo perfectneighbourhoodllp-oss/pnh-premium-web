@@ -1,0 +1,48 @@
+/* Scroll-scrub hero USP overlay (desktop only). The items start hidden and are
+   animated in by PropertyHeroScrub via the pinned ScrollTrigger timeline, while
+   the hero details lift away. Scoped under .elyse to match the property theme. */
+.elyse .phero-usps {
+	position: absolute;
+	inset: 0;
+	z-index: 3;
+	display: flex;
+	align-items: flex-end;
+	pointer-events: none;
+}
+.elyse .phero-usps .wrap {
+	width: 100%;
+	padding-bottom: 64px;
+}
+.elyse .phero-usp {
+	display: flex;
+	gap: 22px;
+	align-items: baseline;
+	padding: 20px 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.16);
+	max-width: 880px;
+	opacity: 0; /* hidden until the scroll timeline reveals it (and if JS is off) */
+	will-change: transform, opacity;
+}
+.elyse .phero-usp:first-child {
+	border-top: none;
+}
+.elyse .phero-usp-n {
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	color: var(--beige);
+	min-width: 30px;
+	flex: none;
+}
+.elyse .phero-usp-t {
+	font-weight: 500;
+	font-size: clamp(1.15rem, 2.1vw, 1.95rem);
+	line-height: 1.22;
+	letter-spacing: -0.01em;
+	color: #fff;
+	max-width: 32ch;
+}
+/* desktop-only feature — the scrub hero itself is desktop-only */
+@media (max-width: 900px) {
+	.elyse .phero-usps { display: none; }
+}
