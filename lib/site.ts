@@ -1,6 +1,6 @@
 import { PROPERTIES, PROP_IMAGES, type Property } from './properties';
 
-export const SITE_URL = 'https://perfectneighbourhood.netlify.app';
+export const SITE_URL = 'https://www.theonlyaddress.com';
 export const SITE_NAME = 'Perfect Neighbourhood';
 export const PHONE = '+91-93796-27377';
 export const WHATSAPP = '919379627377';
