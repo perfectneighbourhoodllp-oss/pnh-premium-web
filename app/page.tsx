@@ -1,5 +1,10 @@
+import type { Metadata } from 'next';
 import HomeScripts from '@/components/HomeScripts';
 import './home.css';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 /* Homepage — byte-faithful port of the original index.html.
    Static shell rendered server-side; the Mercury CSS (app/home.css) and the
