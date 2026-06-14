@@ -106,10 +106,10 @@ export default function Home() {
             <p>A collection kept deliberately small — so that what&apos;s inside stays rare, and the life around it stays yours.</p>
           </div>
           <div className="stats-grid">
-            <div className="stat reveal"><div className="num" data-count="20">0</div><div className="lbl">Curated Addresses</div><div className="sub">Hand-selected. Never advertised.</div></div>
-            <div className="stat reveal d1"><div className="num" data-count="38">0<span className="suf">Cr</span></div><div className="lbl">The Pinnacle</div><div className="sub">Where the city&apos;s ambition finally rests.</div></div>
-            <div className="stat reveal d2"><div className="num" data-count="31">0</div><div className="lbl">Acres of Green</div><div className="sub">Room to breathe, and then some.</div></div>
-            <div className="stat reveal d3"><div className="num" data-count="4">0</div><div className="lbl">Private Enclaves</div><div className="sub">Each a world entirely its own.</div></div>
+            <div className="stat reveal"><div className="num">Curated</div><div className="lbl">The Collection</div><div className="sub">Chosen with care, across the city.</div></div>
+            <div className="stat reveal d1"><div className="num">Private</div><div className="lbl">By Introduction</div><div className="sub">Shared through conversation, not search.</div></div>
+            <div className="stat reveal d2"><div className="num">Green</div><div className="lbl">The Setting</div><div className="sub">Space, calm, and room to breathe.</div></div>
+            <div className="stat reveal d3"><div className="num">Yours</div><div className="lbl">The Life Around It</div><div className="sub">Quiet, and entirely your own.</div></div>
           </div>
         </div>
       </section>
