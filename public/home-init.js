@@ -28,7 +28,7 @@ const _LEGACY=[
   {name:"Prestige Leela Residences",loc:"Old Airport Road",developer:"Prestige Group",type:"apartment",status:"ready",facing:"East",sqft:"3,900–5,400",entry:"16.0",range:"₹16 – 23 Cr",hi:["Adjacent to The Leela Palace","Branded, fully-serviced residences"],tags:["Leela Branded","Serviced","Concierge"],img:"1600573472550-8090b5e0745e",lat:12.960,lng:77.648},
   {name:"Embassy One — Four Seasons",loc:"Bellary Road",developer:"Embassy Group",type:"penthouse",status:"invite",facing:"North",sqft:"5,600–7,900",entry:"30",range:"₹30 – 44 Cr",hi:["12 min to the city centre","Four Seasons-serviced penthouses"],tags:["Four Seasons","Concierge","Sky Pool"],img:"1600585152220-90363fe7e115",lat:13.020,lng:77.591}
 ];
-const statusMeta={ready:{label:"Ready",cls:"",color:"#7c7f8c",txt:"#171721"},invite:{label:"By Invitation",cls:"invite",color:"#cdddff",txt:"#171721"},sold:{label:"Sold Out",cls:"sold",color:"#45454f",txt:"#ededf3"}};
+const statusMeta={ready:{label:"Ready",cls:"",color:"#8c8676",txt:"#0f0e09"},invite:{label:"By Invitation",cls:"invite",color:"#cfecd9",txt:"#0f0e09"},sold:{label:"Sold Out",cls:"sold",color:"#3b392f",txt:"#f4f1e9"}};
 const imgURL=id=> !id ? '' : /[\/.]/.test(id) ? id : `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=800&q=80`;
 const propHero=x=>((window.PROP_IMAGES&&window.PROP_IMAGES[x.slug])||[])[0]||x.img;
 const monogram=n=>n.split('—')[0].trim().split(' ').slice(0,2).map(w=>w[0]).join('');
@@ -155,7 +155,7 @@ try{
       listEl.appendChild(row);
     });
     setTimeout(()=>map.invalidateSize(),300);
-  } else { const el=document.getElementById('leafmap'); if(el){el.style.display='flex';el.style.alignItems='center';el.style.justifyContent='center';el.innerHTML='<span style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#70707d">Map unavailable offline</span>';} }
+  } else { const el=document.getElementById('leafmap'); if(el){el.style.display='flex';el.style.alignItems='center';el.style.justifyContent='center';el.innerHTML='<span style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#857f70">Map unavailable offline</span>';} }
 }catch(e){console.warn('Map skipped:',e);}
 
 if(typeof Lenis!=='undefined' && !prefersReduce){
@@ -187,7 +187,7 @@ if(hasGSAP && !prefersReduce){
   gsap.to('#heroVid',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
   gsap.to('#featImg',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.feature',start:'top bottom',end:'bottom top',scrub:true}});
   document.querySelectorAll('[data-words]').forEach(el=>{
-    gsap.to(el.querySelectorAll('.wd'),{color:'#ededf3',stagger:.06,ease:'none',scrollTrigger:{trigger:el,start:'top 80%',end:'top 38%',scrub:true}});
+    gsap.to(el.querySelectorAll('.wd'),{color:'#f4f1e9',stagger:.06,ease:'none',scrollTrigger:{trigger:el,start:'top 80%',end:'top 38%',scrub:true}});
   });
 }else{ document.querySelectorAll('[data-words] .wd').forEach(w=>w.style.color='var(--starlight)'); }
 
@@ -254,7 +254,7 @@ window.addEventListener('load',()=>{ if(hasGSAP) ScrollTrigger.refresh(); });
     for(let i=0;i<lines;i++){
       const y0=(i/(lines-1))*h;
       ctx.beginPath();
-      ctx.strokeStyle='rgba(205,221,255,'+(0.05+0.05*Math.sin(i*0.5+t*0.3))+')';
+      ctx.strokeStyle='rgba(207,236,217,'+(0.05+0.05*Math.sin(i*0.5+t*0.3))+')';
       for(let x=0;x<=w;x+=14*dpr){
         const yy=y0 + Math.sin(x*0.0042 + i*0.6 + t*0.4)*24*dpr + Math.sin(x*0.011 - t*0.25 + i)*10*dpr;
         x===0?ctx.moveTo(x,yy):ctx.lineTo(x,yy);
