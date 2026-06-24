@@ -147,9 +147,9 @@ export default function Home() {
               <h2>Every residence, mapped</h2>
             </div>
             <div className="map-legend">
-              <div className="lg"><span className="dot" style={{ background: '#ededf3' }} />Ready</div>
-              <div className="lg"><span className="dot" style={{ background: '#cdddff' }} />By Invitation</div>
-              <div className="lg"><span className="dot" style={{ background: '#3a3a45' }} />Sold Out</div>
+              <div className="lg"><span className="dot" style={{ background: '#f4f1e9' }} />Ready</div>
+              <div className="lg"><span className="dot" style={{ background: '#cfecd9' }} />By Invitation</div>
+              <div className="lg"><span className="dot" style={{ background: '#2d2b23' }} />Sold Out</div>
             </div>
           </div>
           <div className="mapx reveal d1">
