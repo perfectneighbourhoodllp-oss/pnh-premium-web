@@ -37,6 +37,7 @@ export default function Home() {
             <a href="#philosophy" data-hover="">The Idea</a>
             <a href="#collection" data-hover="">The Collection</a>
             <a href="#map" data-hover="">The Map</a>
+            <a href="/blog" data-hover="">Journal</a>
             <a href="#contact" data-hover="">Enquire</a>
           </nav>
           <a href="#contact" className="pill pill-ghost" data-hover="" data-magnetic="">Request Access</a>
@@ -66,7 +67,7 @@ export default function Home() {
             <span className="row"><span>The address is the <em>last</em></span></span>
             <span className="row"><span>luxury money can buy.</span></span>
           </h1>
-          <p className="sub">Twenty hand-selected residences across Bangalore — never advertised, offered by introduction.</p>
+          <p className="sub">Hand-selected residences across Bangalore — never advertised, offered by introduction.</p>
           <div className="hero-cta">
             <form className="capture" id="capture" noValidate>
               <input type="email" name="email" placeholder="Your email for private access" />
@@ -120,7 +121,7 @@ export default function Home() {
           <div className="coll-head reveal">
             <span className="eyebrow">The Collection · Live Inventory</span>
             <h2>A curated selection</h2>
-            <p>Twenty residences across Bangalore&apos;s most luxury corridors. Filter by typology, by enclave, or simply by what moves you.</p>
+            <p>Residences across Bangalore&apos;s most luxury corridors. Filter by typology, by enclave, or simply by what moves you.</p>
           </div>
           <div className="filters reveal d1" id="filters">
             <button className="filter active" data-filter="all" data-hover="">All</button>
@@ -225,7 +226,7 @@ export default function Home() {
               <p>A private collection of Bangalore&apos;s finest addresses. Hand-selected, never advertised, offered by introduction.</p>
             </div>
             <div className="f-col"><h4>Explore</h4>
-              <a href="#philosophy" data-hover="">The Idea</a><a href="#collection" data-hover="">The Collection</a><a href="#map" data-hover="">The Map</a><a href="#featured" data-hover="">Featured</a>
+              <a href="#philosophy" data-hover="">The Idea</a><a href="#collection" data-hover="">The Collection</a><a href="#map" data-hover="">The Map</a><a href="/blog" data-hover="">Journal</a><a href="#featured" data-hover="">Featured</a>
             </div>
             <div className="f-col"><h4>Office</h4>
               <p>The Collection House</p><p>UB City, Vittal Mallya Road</p><p>Bangalore 560001</p>

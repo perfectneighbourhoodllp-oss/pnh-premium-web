@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { PROPERTIES } from '@/lib/properties';
+import { POSTS } from '@/lib/blog';
 import { SITE_URL } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -9,5 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
-  return [home, ...pages];
+  const blogIndex = { url: `${SITE_URL}/blog`, changeFrequency: 'weekly' as const, priority: 0.7 };
+  const posts = POSTS.map((p) => ({
+    url: `${SITE_URL}/blog/${p.slug}`,
+    lastModified: new Date(p.dateModified),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+  return [home, ...pages, blogIndex, ...posts];
 }
