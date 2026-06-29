@@ -311,6 +311,7 @@ export default async function PropertyPage({ params }: { params: Promise<{ slug:
             <div className="links">
               <a href="/#collection" data-hover="">The Collection</a>
               <a href="/#map" data-hover="">The Map</a>
+              <a href="/blog" data-hover="">Journal</a>
               <a href="#enquire" data-hover="">Enquire</a>
             </div>
             <div className="copy">© 2026 Perfect Neighbourhood. All prices indicative · sourced from public listings.</div>

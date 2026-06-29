@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(node -e ' *)",
+      "WebFetch(domain:www.squareyards.com)",
+      "Bash(node scripts/remove-adarsh.mjs)",
+      "Bash(grep -l '`' lib/posts/sobha-international-city.ts lib/posts/prestige-leela-residences.ts lib/posts/embassy-one-four-seasons.ts)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(node /private/tmp/claude-501/-Users-jaisy14-Desktop-pnh-premium-web/e432eda2-7e99-432f-8c34-2fa278a0469f/scratchpad/count.js)"
+    ]
+  }
+}

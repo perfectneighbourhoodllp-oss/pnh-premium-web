@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "A private collection of twenty of Bangalore's finest residences. Hand-selected, never advertised, offered by introduction.",
+    "A private collection of Bangalore's finest residences. Hand-selected, never advertised, offered by introduction.",
   openGraph: { type: 'website', siteName: SITE_NAME, url: SITE_URL },
   twitter: { card: 'summary_large_image' },
 };
