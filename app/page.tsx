@@ -1,9 +1,29 @@
 import type { Metadata } from 'next';
 import HomeScripts from '@/components/HomeScripts';
+import { SITE_URL, SITE_NAME, PHONE, EMAIL } from '@/lib/site';
 import './home.css';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
+};
+
+const orgLd = {
+  '@context': 'https://schema.org',
+  '@type': 'RealEstateAgent',
+  name: SITE_NAME,
+  legalName: 'Perfect Neighbourhood LLP',
+  url: SITE_URL,
+  email: EMAIL,
+  telephone: PHONE,
+  areaServed: 'Bengaluru',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '3A, Srinidhi Envoy, 4th Cross, B Channasandra, Kasturi Nagar',
+    addressLocality: 'Bengaluru',
+    addressRegion: 'Karnataka',
+    postalCode: '560043',
+    addressCountry: 'IN',
+  },
 };
 
 /* Homepage — byte-faithful port of the original index.html.
@@ -13,6 +33,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="mercury">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }} />
       <div className="grain" />
       <div className="progress"><i id="prog" /></div>
       <div className="cursor" id="cursor" />
@@ -229,7 +250,7 @@ export default function Home() {
               <a href="#philosophy" data-hover="">The Idea</a><a href="#collection" data-hover="">The Collection</a><a href="#map" data-hover="">The Map</a><a href="/blog" data-hover="">Journal</a><a href="#featured" data-hover="">Featured</a>
             </div>
             <div className="f-col"><h4>Office</h4>
-              <p>The Collection House</p><p>UB City, Vittal Mallya Road</p><p>Bangalore 560001</p>
+              <p>3A, Srinidhi Envoy, 4th Cross</p><p>B Channasandra, Kasturi Nagar</p><p>Bengaluru, Karnataka 560043</p>
             </div>
             <div className="f-col"><h4>Contact</h4>
               <a href="tel:+919379627377" data-hover="">+91 93796 27377</a><a href="mailto:perfectneighbourhoodllp@gmail.com" data-hover="">perfectneighbourhoodllp@gmail.com</a><a href="#contact" data-hover="">Book a viewing</a>
